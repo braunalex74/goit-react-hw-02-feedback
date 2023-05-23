@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Section = ({ title, children }) => {
-  <div>
-    <h2>{title}</h2>
-    {children}
-  </div>;
+import { SectionWrapper } from './Section.styled';
+
+export const Section = ({ title, children }) => {
+  return (
+    <SectionWrapper>
+      <h2>{title}</h2>
+      {children}
+    </SectionWrapper>
+  );
 };
