@@ -1,11 +1,13 @@
-import React from 'react';
+import { Button, ButtonContainer } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
-      <button onClick={() => onLeaveFeedback('good')}>Good</button>
-      <button onClick={() => onLeaveFeedback('neutral')}>Neutral</button>
-      <button onClick={() => onLeaveFeedback('bad')}>Bad</button>
-    </div>
+    <ButtonContainer>
+      {options.map(option => (
+        <Button key={option} onClick={() => onLeaveFeedback(option)}>
+          {option}
+        </Button>
+      ))}
+    </ButtonContainer>
   );
 };

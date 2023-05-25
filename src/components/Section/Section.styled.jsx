@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { theme } from '../../theme';
 
-export const SectionWrapper = styled.section`
+export const SectionStyles = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: ${props => props.theme.space[4]}px;
-  padding-bottom: ${props => props.theme.space[4]}px;
+  flex-direction: column;
+  gap: 10px;
 `;

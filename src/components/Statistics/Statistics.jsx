@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatisticsWrapper } from './Statistics.styled';
+import { css } from '@emotion/react';
 
 export const Statistics = ({
   good,
@@ -8,13 +8,17 @@ export const Statistics = ({
   total,
   positivePercentage,
 }) => {
+  const statisticsStyles = css`
+    margin-bottom: 10px;
+  `;
+
   return (
-    <StatisticsWrapper>
+    <div css={statisticsStyles}>
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
       <p>Total: {total}</p>
       <p>Positive feedback: {positivePercentage}%</p>
-    </StatisticsWrapper>
+    </div>
   );
 };
