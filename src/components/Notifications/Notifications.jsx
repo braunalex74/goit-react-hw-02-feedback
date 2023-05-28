@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import PropTypes from 'prop-types';
 
 export const Notification = ({ message }) => {
   const notificationStyles = css`
@@ -36,4 +37,8 @@ export const Statistics = ({
       <p>Positive feedback: {positivePercentage}%</p>
     </div>
   );
+};
+
+Notification.propTypes = {
+  message: PropTypes.string,
 };
